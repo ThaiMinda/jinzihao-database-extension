@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "实时公交数据库车辆型号扩展",
+  "version": "0.1.0",
+  "description": "在实时公交数据库中显示车辆型号",
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": ["https://*.bjbus.jinzihao.me/line/*"],
+      "js": ["data.js","linepage-script.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://*.bjbus.jinzihao.me/bus/*"],
+      "js": ["data.js","buspage-script.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
